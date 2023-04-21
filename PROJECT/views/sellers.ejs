@@ -1,0 +1,46 @@
+<%- include('navbar') %>
+<div class="addSeller">
+  <div class="container px-5">
+    <section class="main-content">
+      <div class="title">Employee Details</div>
+      <div class="content">
+        <br/>
+        <br/>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Gender</th>
+              <th>Salary</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if(sellerData.length!=0){ var i=1;
+            sellerData.forEach(function(data){ %>
+            <tr>
+              <td><%=data.EMP_ID %></td>
+              <td><%=data.FIRST_NAME %></td>
+              <td><%=data.LAST_NAME %></td>
+              <td><%=data.EMP_GENDER %></td>
+              <td><%=data.EMP_SALARY %></td>
+              <td><a class="btn-primary px-2 my-sm-0" href="/edit-seller/<%=data.EMP_ID%>">Edit</a></td>
+              <td><a class="btn-danger px-2 my-sm-0" href="/sellers/delete/<%=data.EMP_ID%>">Delete</a></td>
+            </tr>
+            <% i++; }) %> <% } else{ %>
+            <tr>
+              <td colspan="7">No Data Found</td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,38 @@
+<%- include('navbar') %>
+<title><%= title %></title>
+<div class="addProduct">
+  <div class="container px-5">
+    <section class="main-content">
+      <div class="title">Customer Details</div>
+      <div class="content">
+        <br/>
+        <br/>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Mobile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if(customerData.length!=0){ var i=1;
+            customerData.forEach(function(data){ %>
+            <tr>
+              <td><%=data.C_ID %></td>
+              <td><%=data.C_NAME %></td>
+              <td><%=data.C_MOBILE %></td>
+            </tr>
+            <% i++; }) %> <% } else{ %>
+            <tr>
+              <td colspan="7">No Data Found</td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,36 @@
+<%- include('navbar') %>
+<title><%= title %></title>
+<div class="addCategories">
+  <div class="container px-5">
+    <div class="title">Category Registration</div>
+    <br/>
+    <div class="content">
+      <form action="/newCategory" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Category Id</span>
+            <input
+              name="categoryId"
+              type="text"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Category</span>
+            <input
+              name="categoryName"
+              type="text"
+              placeholder="Enter category"
+              required
+            />
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="New" href="/newCategory" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

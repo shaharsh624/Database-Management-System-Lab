@@ -1,0 +1,76 @@
+<%- include('navbar') %>
+<title><%= title %></title>
+<div class="addSeller">
+  <div class="container px-5">
+    <div class="title">Product Registration</div>
+    <div class="content">
+      <form action="/newProduct" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Product Id</span>
+            <input name="productId" type="text" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Product Name</span>
+            <input
+              name="productName"
+              type="text"
+              placeholder="Enter product name"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Cost Price</span>
+            <input
+              name="productCostPrice"
+              type="text"
+              placeholder="Enter Cost price"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Selling Price</span>
+            <input
+              name="productSellingPrice"
+              type="text"
+              placeholder="Enter Selling price"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Stock</span>
+            <input
+              name="productStock"
+              type="text"
+              placeholder="Enter Present Stock"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label class="details">Category</label>
+            <select name="productCategory" name="languages" id="lang">
+              <option value="Select a Category" selected="selected">
+                Select a Category
+              </option>
+              <option value="C101">Bakery</option>
+              <option value="C102">Beverages</option>
+              <option value="C103">Dairy</option>
+              <option value="C104">Grocery</option>
+              <option value="C105">Produce</option>
+              <option value="C106">Cereals</option>
+              <option value="C107">Snacks</option>
+              <option value="C108">Household Items</option>
+              <option value="C109">Beauty</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="New" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

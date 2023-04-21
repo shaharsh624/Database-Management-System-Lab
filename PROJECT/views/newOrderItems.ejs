@@ -1,0 +1,71 @@
+<%- include('navbar') %>
+<title><%= title %></title>
+<div class="addSeller">
+  <div class="container px-5">
+    <div class="title">New Order</div>
+    <div class="content">
+      <form method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Order Id</span>
+            <input name="orderId" type="text" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Customer Id</span>
+            <input
+              name="customerId"
+              type="text"
+              required
+              readonly
+              value="<%= customerId %>"
+            />
+          </div>
+          <div class="input-box">
+            <label class="details">Products</label>
+            <select name="productSel" name="languages" id="lang">
+              <option value="Select a Category" selected="selected">
+                Select a Product
+              </option>
+              <% productData.forEach(function(option) { %>
+              <option value="<%= option.PRODUCT_ID %>">
+                <%= option.PRODUCT_NAME %>
+              </option>
+              <% }) %>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Quantity</span>
+            <input
+              name="productQuantity"
+              type="text"
+              placeholder="Enter Quantity"
+              required
+            />
+          </div>
+        </div>
+        <div class="button">
+          <input
+            type="submit"
+            name="newButton"
+            value="Add to Cart"
+            href="/newOrderItems"
+            onclick="javascript: form.action='/newOrderItems';"
+          />
+        </div>
+
+        <input hidden type = "text" name="Amount" value= <%= amount %> />
+        <div class="button">
+          <input
+            type="submit"
+            name = "checkoutButton"
+            value="Add & Checkout"
+            href="/checkout"
+            onclick="javascript: form.action='/checkout';"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

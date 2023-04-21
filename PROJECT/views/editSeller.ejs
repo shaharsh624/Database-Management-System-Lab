@@ -1,0 +1,65 @@
+<%- include('navbar') %>
+<title><%= title %></title>
+<div class="addSeller">
+  <div class="container px-5">
+    <div class="title">Edit Seller</div>
+    <div class="content">
+      <form action="/editSeller" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Employee Id</span>
+            <input
+              name="empId"
+              type="text"
+              required
+              readonly
+              value="<%= sellerId %>"
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input
+              name="empFName"
+              type="text"
+              placeholder="Enter First Name"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input
+              name="empLName"
+              type="text"
+              placeholder="Enter Last Name"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Salary</span>
+            <input
+              name="empSal"
+              type="text"
+              placeholder="Enter Salary"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label class="details">Gender</label>
+            <select name="empGender" id="lang">
+              <option value="Select Gender" selected="selected">
+                Select Gender
+              </option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Edit" href="/editSeller" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

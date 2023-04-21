@@ -1,0 +1,44 @@
+<%- include('navbar') %>
+<title><%= title %></title>
+<div class="addSeller">
+  <div class="container px-5">
+    <div class="title">Customer Registration</div>
+    <div class="content">
+      <form action="/newCustomer" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Customer Id</span>
+            <input
+              name="customerId"
+              type="text"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Customer Name</span>
+            <input
+              name="customerName"
+              type="text"
+              placeholder="Enter Customer name"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Customer Mobile</span>
+            <input
+              name="customerMobile"
+              type="text"
+              placeholder="Enter Customer Mobile"
+              required
+            />
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="New" href="/newCustomer" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

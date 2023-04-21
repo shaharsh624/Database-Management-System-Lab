@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/styles/nav.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/seller.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/product.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/categories.css" />
+    <link
+      rel="icon"
+      href="https://img.freepik.com/free-vector/shopping-cart-supermarket-logo-template_23-2148470295.jpg?w=740&t=st=1681566941~exp=1681567541~hmac=b52b3c7a3a4e159ac793752e10ad2c8831b2be8245b427e0ce503665fabcf459"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand pt-3" href="/">
+          <h5 class="navigation-heading">Supermart</h5>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/sales">Sales</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="nav-link dropbtn">Product</button>
+                <div class="dropdown-content">
+                  <a href="/new-product">New Product</a>
+                  <a href="/products">Product Details</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="nav-link dropbtn">Employee</button>
+                <div class="dropdown-content">
+                  <a href="/new-seller">New Employee</a>
+                  <a href="/sellers">Employee Details</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="nav-link dropbtn">Customer</button>
+                <div class="dropdown-content">
+                  <a href="/new-customer">New Customer</a>
+                  <a href="/customers">Customer Details</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="nav-link dropbtn">Order</button>
+                <div class="dropdown-content">
+                  <a href="/new-order">New Order</a>
+                  <a href="/orders">Orders</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <button class="nav-link dropbtn">Category</button>
+                <div class="dropdown-content">
+                  <a href="/new-category">New Category</a>
+                  <a href="/categories">Categories</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0" action="/login">
+          <button class="btn btn-light my-2 my-sm-0" type="submit">
+            Sign Out
+          </button>
+        </form>
+      </nav>
+    </div>
+  </body>
+</html>

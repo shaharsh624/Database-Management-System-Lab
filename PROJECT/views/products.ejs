@@ -1,0 +1,48 @@
+<%- include('navbar') %>
+<title><%= title %></title>
+<div class="addProduct">
+  <div class="container px-5">
+    <section class="main-content">
+      <div class="title">Product Details</div>
+      <div class="content">
+        <br/>
+        <br/>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Cost Price</th>
+              <th>Selling Price</th>
+              <th>Stock</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if(productData.length!=0){ var i=1;
+            productData.forEach(function(data){ %>
+            <tr>
+              <td><%=data.PRODUCT_ID %></td>
+              <td><%=data.PRODUCT_NAME %></td>
+              <td><%=data.CATEGORY_ID %></td>
+              <td><%=data.COST_PRICE %></td>
+              <td><%=data.SELLING_PRICE %></td>
+              <td><%=data.STOCK %></td>
+              <td><a class="btn-primary px-2 my-sm-0" href="/edit-product/<%=data.PRODUCT_ID%>">Edit</a></td>
+              <td><a class="btn-danger px-2 my-sm-0" href="/products/delete/<%=data.PRODUCT_ID%>">Delete</a></td>
+            </tr>
+            <% i++; }) %> <% } else{ %>
+            <tr>
+              <td colspan="7">No Data Found</td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

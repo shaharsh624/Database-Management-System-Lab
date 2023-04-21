@@ -1,0 +1,40 @@
+<%- include('navbar') %>
+<title><%= title %></title>
+<div class="addProduct">
+  <div class="container px-5">
+    <section class="main-content">
+      <div class="title">Order Details</div>
+      <div class="content">
+        <br/>
+        <br/>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Order Id</th>
+              <th>Customer</th>
+              <th>Amount</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if(orderData.length!=0){ var i=1;
+            orderData.forEach(function(data){ %>
+            <tr>
+              <td><%=data.ORDER_ID %></td>
+              <td><%=data.CUSTOMER_ID %></td>
+              <td><%=data.AMOUNT %></td>
+              <td><%=data.ORDER_DATE %></td>
+            </tr>
+            <% i++; }) %> <% } else{ %>
+            <tr>
+              <td colspan="7">No Data Found</td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

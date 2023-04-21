@@ -1,0 +1,69 @@
+<%- include('navbar') %>
+<title><%= title %></title>
+<div class="addCategories">
+  <div class="container px-5">
+    <div class="title">Overview</div>
+    <br/>
+    <div class="content">
+      <form action="/newCategory" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Total Sales</span>
+            <input
+              name="totalSales"
+              type="text"
+              value="<%= total %>"
+              readonly
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Average Sales</span>
+            <input
+              name="avgSales"
+              type="text"
+              value="<%= avg %>"
+              readonly
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Total Profit</span>
+            <input
+              name="totalProfit"
+              type="text"
+              value="<%= profit %>"
+              readonly
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Total Customers</span>
+            <input
+              name="totalCustomers"
+              type="text"
+              value="<%= num %>"
+              readonly
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Total Products</span>
+            <input
+              name="totalProducts"
+              type="text"
+              value="<%= products %>"
+              readonly
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Total Categories</span>
+            <input
+              name="totalQueries"
+              type="text"
+              value="<%= category %>"
+              readonly
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>
